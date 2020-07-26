@@ -6,40 +6,78 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
         <title>naCVigation</title>
+        <style>
+            body{
+				background: skyblue;
+				color:white;
+				padding: 30px;
+				font-family: verdana;
+			}
+            #destlang{
+                font-size: 30px;
+            }
+            .container{
+                text-align: center;
+            }
+            .btn{
+                font-size: 50px;
+                width: 100%;
+                height: 25%;
+                display:inline-block;
+                padding:0.16em 0.6em;
+                border:0.1em solid #36739c;
+                margin:0 0.2em 0.2em 0;
+                border-radius:0.5em;
+                box-sizing: border-box;
+                text-decoration:none;
+                font-family:'Roboto',sans-serif;
+                font-weight:300;
+                color:#000000;
+                text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+                background-color:#e9f0fa;
+                text-align:center;
+                transition: all 0.15s;
+            }
+        </style>
     </head>
 
     <body>
         <div class="container">
             <h1>Upload image</h1>
-            <%= typeof msg != 'undefined' ? msg : '' %>
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-                <div class="file-field input-field">
-                  <div class="btn">
+            <h5><%= typeof msg != 'undefined' ? msg : '' %></h2>
+            <div class="form-container">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
                     <span>File</span>
-                    <input name="img" type="file" accept="image/*">
-                  </div>
-                  <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                  </div>
-                </div>
-                <button type="submit" class="btn">Submit</button>
-            </form>
+                    <input id="upload" class="btn" name="img" type="file" accept="image/*">
+                    <input id="destlang" class="btn" type="text", name="lang", value="<%= qs.lang %>" placeholder="(optional) destination language for translation, default: English">
+                    <br>
+                    <a id="click" onclick="performClick('upload');">open file dialog</a>
+                    <br>
+                    <button id="submit" class="btn" type="submit" value="submit">
+                        Submit
+                    </button>
+	    		</form>
+            </div>
+            
             <br>
-            <%= typeof txt != 'undefined' ? txt : ''%>
-			<br>
-			<%= typeof audio_dir_and_name != 'undefined' ? audio_dir_and_name : ''%>
-			<audio src="<%= typeof audio_dir_and_name != 'undefined' ? audio_dir_and_name : ''%>" controls autoplay type="audio/mpeg">
+            <h2><%= typeof txt != 'undefined' ? txt : ''%></h2>
+            <br>
+			<audio src="<%= typeof audio_dir_and_name != 'undefined' ? audio_dir_and_name : ''%>" controls autoplay type="audio/mpeg"></audio>
+            <br>
+            <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
+
+            <video id="player" controls autoplay></video>
+            <button id="capture">Capture</button>
+            <canvas id="snapshot" width=320 height=240></canvas>
+
 				
             </audio>
             <section id="media"></section>
             <br>
-            <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img">
+			
         </div>
-
         
-
-        
-        
+        <script src='voiceControl.js'></script>
         
         
 
