@@ -115,7 +115,7 @@ We wish to develop a tool using image recognition and text-to-speech tools to he
 
 ## Program flow
 
-![Image](https://github.com/hhdqirui/naCVigation_Ubuntu_WSL/blob/master/public/program%20flow.png)
+![Image](https://github.com/hhdqirui/naCVigation_Ubuntu_WSL/blob/master/public/programFlow2.png)
 
 ## Features and Timeline
 
