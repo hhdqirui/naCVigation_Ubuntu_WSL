@@ -67,10 +67,9 @@ There are two version of version 2 website. One for Windows (preferably Windows 
  `npm install`  
   If not successful, run  
    `npm install express ejs multer gtts body-parser iconv-lite`.
-3. Download Tesseract-OCR from https://github.com/UB-Mannheim/tesseract/wiki. Know the path to `tesseract.exe`. Then add `pytesseract.pytesseract.tesseract_cmd = '{path to tesseract.exe}\\tesseract.exe'` to `line 5` of `main.py` ({path to tesseract.exe} is the path to tesseract.exe in Tesseract-OCR that is downloaded) 
-4. In terminal, run  
+3. In terminal, run  
 `pip install opencv-python pytesseract googletrans`
-7. To start the server, run  
+4. To start the server, run  
 `node app.js`  
 then open a browser and go to http://localhost:3000/   
 
@@ -90,9 +89,9 @@ then open a browser and go to http://localhost:3000/
 then run  
 `sudo apt install tesseract-ocr`  
 `sudo apt install libtesseract-dev`
-6. In terminal run    
+4. In terminal run    
 `pip3 install opencv pytesseract googletrans`
-7. To start the server, run  
+5. To start the server, run  
 `node app.js`  
 then open a browser and go to http://localhost:3000/
 
@@ -120,7 +119,7 @@ We wish to develop a tool using image recognition and text-to-speech tools to he
 
 ## Program flow
 
-![Image](https://drive.google.com/open?id=1A17D9IejHANmGrqYLBMWvcKaKoaB3uXJ)
+![Image](https://github.com/hhdqirui/naCVigation_Ubuntu_WSL/blob/master/public/programFlow2.png)
 
 ## Features and Timeline
 
