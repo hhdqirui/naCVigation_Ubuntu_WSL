@@ -7,7 +7,11 @@ Apollo 11
 There are two versions of our project. Each of them has its own strengths and short-comings.   
 
 Version 1: https://nacvigation.azurewebsites.net  
-Version 2: ec2-54-254-182-176.ap-southeast-1.compute.amazonaws.com:3000   
+Version 2: ec2-54-254-182-176.ap-southeast-1.compute.amazonaws.com:3000     
+
+Version 2 github repository:   
+Windows version: https://github.com/hhdqirui/naCVgation  
+Linux (Ubuntu) version: https://github.com/hhdqirui/naCVigation_Ubuntu_WSL`
 
 Both versions can use a webcam to capture image on the spot and then download the image which users can use for text extraction in this website. Both versions also have voice control mechanism which is friendly for visually impaired people, allowing users to use its functionalities without the need to click different buttons. but the voice control mechanism of the two version is used under different conditions.
 
