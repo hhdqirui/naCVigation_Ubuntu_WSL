@@ -90,7 +90,7 @@ then run
 `sudo apt install tesseract-ocr`  
 `sudo apt install libtesseract-dev`
 4. In terminal run    
-`pip3 install opencv pytesseract googletrans`
+`pip3 install opencv-python pytesseract googletrans`
 5. To start the server, run  
 `node app.js`  
 then open a browser and go to http://localhost:3000/
