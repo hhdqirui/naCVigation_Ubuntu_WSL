@@ -11,7 +11,7 @@ Version 2: ec2-54-254-182-176.ap-southeast-1.compute.amazonaws.com:3000
 
 Version 2 github repository:   
 Windows version: https://github.com/hhdqirui/naCVgation  
-Linux (Ubuntu) version: https://github.com/hhdqirui/naCVigation_Ubuntu_WSL`
+Linux (Ubuntu) version: https://github.com/hhdqirui/naCVigation_Ubuntu_WSL
 
 Both versions can use a webcam to capture image on the spot and then download the image which users can use for text extraction in this website. Both versions also have voice control mechanism which is friendly for visually impaired people, allowing users to use its functionalities without the need to click different buttons. but the voice control mechanism of the two version is used under different conditions.
 
@@ -48,11 +48,11 @@ Default language is "English"
 
 |command         | action taken by the website      |
 |----------------|----------------------------------|
-|"chinese"       | the text input field will be filled with the word "chinese" and the text will be translated to Chinese|
-|"english"       | the text input field will be filled with the word "english" and the text will be translated to English|
 |"upload"        | open the file dialog (need to click the webpage first. Anywhere would be fine)            |
 |"go"            | submit the image                 |
 |"capture"       | capture the image                |
+|"{name of the language}" e.g. "chinese"|fill the text input field with the name of the language  i.e. set the destination language of translation|
+|"help"          |paly the audio form of voice command instructions|
 
 
 ## To run version 2 website locally
@@ -145,6 +145,43 @@ The design should be able to convert the extracted text into audio automatically
 
 ## Features to be completed by the mid of July: 
 Corporate this developed tool into a website and test it with sufficient data to make sure it works
+
+## User Acceptance Test
+We have gathered a group of volunteers to test our website. For each user, we put the users into two scenarios, one in which the user was not blindfolded and in the other scenario, the user was blindfolded in order to simulate a situation where the user is a visually-impaired person. Under these two scenarios, users were asked to use the websites and their feedback was recorded.  
+  
+### Feedback records:
+|Tester’s background|Good Points|Areas of improvement|
+|-------------------|-----------|--------------------|
+|University student who is wearing spectacles  with 600 degrees|It is easy and simple to use. The UI looks very succinct and easy to control. The voice mechanism is great and it can truly understand my instructions.|The control words are quite hard to remember and if possible, can try to use words that have similar meaning to the functions.|
+|University student who is wearing spectacles with 400 degrees|It is generally ready to use and the select and translate file is quite responsive.|Sometimes the voice mechanism may not be able to detect my commands and I need to restate my command. Can have more translation languages.|
+|University student who is not wearing spectacles (no. 1)|The result of the extraction is generally good. It is easy to use.|Maybe Version 2 can have a better UI. Include instruction on the website so no need to refer to README for instruction to use the website.|
+|University student who is not wearing spectacles (no. 2)|It is easy to use. The extraction is generally accurate. It is good when using on a smartphone as it can take pictures directly on the phone and use it|The style of the button can be better and make the button bigger as it is not easy  to click on the smartphone.|
+|Middle age working adult (no. 1)|It is good to use and the translation is roughly correct.|The voice command words are not easy to remember. Can improve on supporting more translation language.|
+|Middle age working adult (no. 2)|It is easy to use and the extraction is quite accurate.|When using the website on a smartphone, the button is still a bit small and the text label of the button is not clear. The voice command words can be more relevant to the instructions.|
+
+### Improvement Based on Feedback
+We have summarized the feedback gathered. According to these feedback, we made adjustments and improved on our current project.  
+
+|Areas of improvement|Improvement|
+|--------------------|-----------|
+|Style of the buttons on the website|We have re-styled our buttons to make it larger and to make the text labels of the buttons are also visible.|
+|Include instructions on the website(voice command word hard to remember)|We have included instructions in textual form and audio form on the website. The audio of instructions can also be played using voice command.|
+|Translation languages|We have included more languages for destination languages of translation.|
+|Control words have no meaning to the command we want to use|We have adjusted and improved on the relevance of voice control words in our version 2 website. During our self-testing, we have tried to use the words that are more relevant to the control action. However, due to the difference in the accent, the more relevant words tend to be more complicated and hard to detect. We are aware of our limitations on natural language processing knowledge and due to our current pool of knowledge, we are unable to detect the more complicated words accurately, so we have to sacrifice the convenience for the ready-to-use functions. However, in future when we are equipped with the relevant knowledge, we can definitely replace the words with the more meaningful words.|
+|Sometimes voice cannot be detected|We have re-written the code on voice recognition to make it more suitable for discreet word detection. Voice command not being detected might be due to the browser the use is using. It is recommended to use Chrome and Firefox for this website. This may also be due to the fact that the surrounding is noisy or there are other sounds present that might affect the voice detection. It is good to choose a place that is relatively quiet.|
+|Extraction process may be slow sometimes.|Due to the limitation in the processing power of the free online server we are using, the translation may take some time for complicated images.We can increase the processing power of the website so that we can be faster in detecting, extracting and translating the more complicated words when we are equipped with a greater budget in the future.|
+
+## Supported Language for Audio Conversion
+- Chinese
+- English
+- Hindi
+- Tamil
+- Japanese
+- Korean
+
+## Supported Language for translation
+https://py-googletrans.readthedocs.io/en/latest/#googletrans-languages
+
 
 ## Tech Stack 
 1. Node.js

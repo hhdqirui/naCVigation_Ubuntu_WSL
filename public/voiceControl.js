@@ -36,6 +36,9 @@ recognition.onresult = function(event) {
             else if(transcript == "capture"){
                 document.getElementById("capture").click();
             }
+            else if(transcript == "help"){
+                document.getElementById("help").play();
+            }
 			console.log(event);
     		console.log(`You said : ${event.results[i][0].transcript}`);
 		}
@@ -63,15 +66,4 @@ captureButton.addEventListener('click', function() {
     window.location.href=dataURI;
 });
 
-// submitCapBtn.addEventListener('click', () => {
-//     var canvas = document.getElementById("snapshot");
-//     var snapshotCanvas = canvas.toDataURL("image/png");
-//     exports.snapshotCanvas = snapshotCanvas;
-// });
-
 navigator.mediaDevices.getUserMedia({video: true}).then(handleSuccess);
-
-// exports.snapshotCanvas = snapshotCanvas;
-// exports.boolCapture = boolCapture;
-// var a = 1;
-// exports.a =a;

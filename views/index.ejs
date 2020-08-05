@@ -8,13 +8,19 @@
         <title>naCVigation</title>
         <style>
             body{
-				background: skyblue;
+				background: rgb(98, 196, 235);
 				color:white;
 				padding: 30px;
 				font-family: verdana;
 			}
+            table {
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid rgba(255, 255, 255, 0.411);
+            }
             #destlang{
-                font-size: 30px;
+                font-size: 25px;
             }
             .container{
                 text-align: center;
@@ -70,7 +76,38 @@
             <button id="capture">Capture</button>
             <canvas id="snapshot" width=320 height=240></canvas>
 
-				
+            <br>
+
+            <table align="center">
+                <tr>
+                    <th>voice command word</th>
+                    <th>action taken by the website</th>
+                </tr>
+                <tr>
+                    <td>"upload"</td>
+                    <td>open the file dialog (need to click the webpage first. Anywhere would be fine)</td>
+                </tr>
+                <tr>
+                    <td>"go"</td>
+                    <td>submit the image</td>
+                </tr>
+                <tr>
+                    <td>"capture"</td>
+                    <td>capture the image</td>
+                </tr>
+                <tr>
+                    <td>"{name of the language}" e.g. "chinese"</td>
+                    <td>fill the text input field with the name of the language      i.e. set the destination language of translation</td>
+                </tr>
+                <tr>
+                    <td>"help"</td>
+                    <td>paly the audio form of voice command instructions</td>
+                </tr>
+            </table>
+            
+            <br>
+
+            <audio id="help" src="instructions.mp3" controls type="audio/mpeg"></audio>
             </audio>
             <section id="media"></section>
             <br>
