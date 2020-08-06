@@ -122,7 +122,7 @@ lang = sys.argv[2]
 translator = Translator()
 
 if lang == '':
-    print(translator.translate(txt, 'en').text)
+    lang = 'en'
 else:
     lang = LANGCODES[lang.lower()]
 
